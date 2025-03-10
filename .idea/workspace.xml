@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="447f1bdd-253f-40ae-951d-1e129499bc36" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/authentication/components/sign-in/sign-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/authentication/components/sign-in/sign-in.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +48,7 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "npm.Angular CLI Server.executor": "Run",
+    "npm.build.executor": "Run",
     "ts.external.directory.path": "D:\\data\\M1\\Rojo\\exam\\garage-m1-front\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -82,6 +79,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -106,7 +118,7 @@
       <workItem from="1741450498774" duration="169000" />
       <workItem from="1741457441984" duration="10530000" />
       <workItem from="1741505703150" duration="638000" />
-      <workItem from="1741608748570" duration="1309000" />
+      <workItem from="1741608748570" duration="5150000" />
     </task>
     <servers />
   </component>
