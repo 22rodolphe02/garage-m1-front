@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="447f1bdd-253f-40ae-951d-1e129499bc36" name="Changes" comment="" />
+    <list default="true" id="447f1bdd-253f-40ae-951d-1e129499bc36" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,9 +37,10 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/setup-architecture",
+    "git-widget-placeholder": "feature/sign-in",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/data/M1/Rojo/exam/garage-m1-front",
+    "last_opened_file_path": "D:/data/M1/Rojo/exam/garage-m1-front/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,12 +48,19 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "npm.Angular CLI Server.executor": "Run",
+    "npm.build.executor": "Run",
     "ts.external.directory.path": "D:\\data\\M1\\Rojo\\exam\\garage-m1-front\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\data\M1\Rojo\exam\garage-m1-front\public\img" />
+      <recent name="D:\data\M1\Rojo\exam\garage-m1-front\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\data\M1\Rojo\exam\garage-m1-front\src\app\core\models" />
+      <recent name="D:\data\M1\Rojo\exam\garage-m1-front\public\img" />
       <recent name="D:\data\M1\Rojo\exam\garage-m1-front\src\app\features\authentication" />
       <recent name="D:\data\M1\Rojo\exam\garage-m1-front\src\app\features\authentication\components" />
     </key>
@@ -69,6 +79,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -91,6 +116,9 @@
       <workItem from="1741449790750" duration="293000" />
       <workItem from="1741450094101" duration="394000" />
       <workItem from="1741450498774" duration="169000" />
+      <workItem from="1741457441984" duration="10530000" />
+      <workItem from="1741505703150" duration="638000" />
+      <workItem from="1741608748570" duration="5150000" />
     </task>
     <servers />
   </component>
