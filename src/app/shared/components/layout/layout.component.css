@@ -1,0 +1,6 @@
+.body{
+  /*background: #f3f4ef;*/
+  /*background: #f7faf7;*/
+  /*background: #f6f6f6;*/
+  background: var(--g-body-bg);
+}

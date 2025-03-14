@@ -1,8 +1,24 @@
 import { Routes } from '@angular/router';
-import {SignInComponent} from './features/authentication/components/sign-in/sign-in.component';
+import {adminRoutes} from './features/admin/components/admin.routes';
+
+
+const loadLayoutComponent = () =>
+  import('./shared/components/layout/layout.component').then(m => m.LayoutComponent);
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'user-space', pathMatch: 'full' },
   {
-    path: 'sign-in', component: SignInComponent
+    path: 'sign-in', loadComponent: () =>
+      import('./features/authentication/components/sign-in/sign-in.component').then(c => c.SignInComponent)
+  },
+  {
+    path: 'user-space',
+    loadComponent: loadLayoutComponent,
+    children: [
+      {
+        path: 'admin',
+        loadChildren: () => adminRoutes
+      }
+    ]
   }
 ];
