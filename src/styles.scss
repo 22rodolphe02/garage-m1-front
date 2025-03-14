@@ -3,7 +3,162 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "primeicons/primeicons.css";
 
+$colors: (
+  "amber": (
+    "label": --p-amber-,
+    "500": #FFC107,
+  ),
+);
+
+
+:root{
+  --g-primary-label: var(--p-amber-);
+  --bs-primary: var(--p-amber-500);
+  --g-primary: var(--p-amber-400);
+  --g-body-bg: #fbfbfb;
+}
+
 html, body{
   font-size: 14px;
   font-family: "Urbanist", sans-serif;
 }
+
+.body-bg{
+  background: var(--g-body-bg);
+}
+
+.circle{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-primary{
+  color: var(--g-primary) !important;
+}
+
+
+.badge-success{
+  color: var(--p-green-500);
+  background: var(--p-green-50);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.badge-warning{
+  color: white;
+  background: var(--p-amber-400);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.badge-danger{
+  color: #D6545E;
+  background: #ffe8ea;
+  padding: 0.18rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.filter{
+  padding: .4rem .6rem;
+  border-radius: 2rem;
+  background: var(--g-body-bg);
+  display: flex;
+  justify-items: center;
+
+  .filter-item{
+    padding: .4rem .7rem;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &:not(:last-child){
+      margin-right: .4rem;
+    }
+
+    &:hover{
+      background: white;
+    }
+
+    &.active{
+      background: #0c0c0c;
+      color: white;
+    }
+  }
+}
+
+
+.table-custom-head{
+  background: #212529;
+}
+
+.table-custom{
+  overflow: hidden;
+  vertical-align: middle !important;
+
+  td{
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  th{
+
+    text-align: center;
+    &:not(.check){
+      font-size: 11px;
+    }
+
+    color: #556268;
+    text-transform: uppercase;
+    //background: var(--is-body-bg);
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #dee2e6 !important;
+  }
+}
+
+.c-primary{
+  color: var(--g-primary);
+}
+
+.table-custom {
+
+  *>.link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+    transition: .2s;
+    &:hover{
+      color: #656565;
+    }
+  }
+}
+
+.text-gray-300{
+  //color: #556268;
+  color: #505050;
+}
+
+.card-custom{
+  background: white;
+  border:var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+.logo{
+  margin-right: 1rem;
+
+  .logo-text{
+    background: -webkit-linear-gradient(var(--p-amber-700), var(--p-amber-400), var(--p-amber-300));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
+
