@@ -1,0 +1,148 @@
+.badge-warning{
+  background: var(--p-amber-50);
+  color: var(--p-amber-500);
+}
+
+.circle{
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+
+
+::ng-deep .fc {
+  .fc-daygrid-day.fc-day-today {
+    background: transparent;
+    .fc-daygrid-day-top {
+      border-radius: .5rem;
+      padding: 0 .5rem;
+      background: #3a3a3a;
+      a {
+        color: var(--g-primary);
+      }
+    }
+  }
+
+  a, * > a {
+    text-decoration: none;
+    color: #0c0c0c;
+    &:hover {
+      color: #556268;
+    }
+  }
+
+  .fc-event {
+    padding: .3rem;
+    background: #fff;
+    border-radius: .5rem;
+    border: 1px solid var(--p-amber-600);
+  }
+
+  .fc-h-event {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: #323131;
+  }
+
+  .fc-v-event .fc-event-main,
+  .fc-h-event .fc-event-main {
+    color: #323131;
+    height: 100%;
+  }
+
+  .fc-theme-standard {
+    td {
+      border: 1px solid #e4e4e4;
+      border-radius: .5rem;
+    }
+  }
+
+  .fc-scrollgrid {
+    border: 0;
+  }
+
+  *> table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    table-layout: auto;
+
+    th, tr:last-child > td:last-child{
+      border: 0 !important;
+    }
+
+    tbody tr td {
+      padding: .2rem;
+      border-radius: .5rem;
+      background: #fff;
+    }
+  }
+
+  th {
+    font-weight: normal;
+  }
+
+  .fc-prev-button,
+  .fc-next-button,
+  .fc-customPrev-button,
+  .fc-customNext-button {
+    border-radius: 50% !important;
+    background: transparent !important;
+    border: 0;
+    color: var(--p-amber-600) !important;
+    font-family: "primeicons";
+    cursor: pointer;
+    transition: .2s all;
+    margin-right: .5rem;
+
+    &:hover {
+      background: #424242 !important;
+      border-color: transparent !important;
+    }
+  }
+
+  .fc-customPrev-button::before {
+    content: "\e904";
+  }
+
+  .fc-customNext-button::before {
+    content: "\e905";
+  }
+
+  .fc-button-group {
+    background: #f6f6f6 !important;
+    border-radius: 2rem;
+    padding: .5rem !important;
+
+    .fc-button {
+      background: none;
+      color: #292929;
+      border: 0 !important;
+      border-radius: 2rem !important;
+      transition: .2s all;
+
+      &:not(:last-child) {
+        margin-right: .3rem;
+      }
+
+      &:hover{
+        background: white;
+      }
+    }
+
+
+  }
+
+  .fc-button-primary:focus {
+    box-shadow: none;
+  }
+
+  .fc-toolbar-chunk > div {
+    display: flex;
+
+    .fc-toolbar-title {
+      margin-right: 1rem;
+    }
+  }
+}
