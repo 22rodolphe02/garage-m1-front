@@ -1,0 +1,62 @@
+.kpi-container{
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: stretch;
+
+  g-kpi-card{
+    flex:1 0 0;
+
+    &:not(:last-child){
+      margin-right: 1rem;
+    }
+  }
+
+
+  //.kpi-item{
+  //  flex:1 0 0;
+  //  padding: .7rem;
+  //  background: white;
+  //  border: 1px solid #e0e0e0;
+  //  border-radius: 1rem;
+  //
+  //  &:not(:last-child){
+  //    margin-right: 1rem;
+  //  }
+  //
+  //
+  //}
+}
+//
+//.kpi-item-content{
+//  font-size: 3.5rem;
+//}
+//
+//.kpi-item-content-dot{
+//
+//  //width: .5rem;
+//  width: 1rem;
+//  height: 8px;
+//  //height: 100% !important;
+//  border-radius: 5px;
+//  background: linear-gradient(90deg, var(--p-blue-400) 0%, var(--g-body-bg) 90%);
+//
+//  &.warning{
+//    background: linear-gradient(90deg, var(--g-primary) 0%, var(--g-body-bg) 90%);
+//  }
+//
+//  &.success{
+//    background: linear-gradient(90deg, var(--p-emerald-400) 0%, var(--g-body-bg) 90%);
+//  }
+//
+//  &.danger{
+//    background: linear-gradient(90deg, var(--p-red-400) 0%, var(--g-body-bg) 90%);
+//  }
+//}
+
+
+.custom-event-style {
+  border-color: var(--p-amber-500) !important; /* Utilisez votre variable CSS */
+  color: var(--p-amber-500) !important;       /* Utilisez votre variable CSS */
+  background-color: white;        /* Optionnel : définissez une couleur de fond */
+}

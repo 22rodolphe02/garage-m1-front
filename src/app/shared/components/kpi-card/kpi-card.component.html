@@ -1,0 +1,66 @@
+<!--<div class="kpi-card" [ngClass]="{ 'dark': darkMode }">-->
+<!--  &lt;!&ndash; Icône + Titre &ndash;&gt;-->
+<!--  <div class="header">-->
+<!--    <div class="icon"><i [class]="icon"></i></div>-->
+<!--    <h4>{{ title }}</h4>-->
+<!--    <a *ngIf="actionLink" [href]="actionLink" class="action">-->
+<!--      <i class="fa-solid fa-arrow-up-right"></i>-->
+<!--    </a>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Dropdown si nécessaire &ndash;&gt;-->
+<!--  <div *ngIf="dropdownOptions" class="dropdown">-->
+<!--    <select [(ngModel)]="selectedOption">-->
+<!--      <option *ngFor="let option of dropdownOptions" [value]="option">{{ option }}</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Affichage des valeurs &ndash;&gt;-->
+<!--  <div class="content">-->
+<!--    <div *ngFor="let item of data" class="data-item">-->
+<!--      <span [ngStyle]="{ 'color': item.color }">{{ item.value }}</span>-->
+<!--      <span class="label">{{ item.label }}</span>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="kpi-item h-100" [ngClass]="{ 'bg-dark text-white': darkMode }">
+  <div class="d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+      <span class="circle border me-2">
+        <i [class]="icon" [ngStyle]="{ 'color': iconColor }"></i>
+      </span>
+      <span class="fw-medium" [ngClass]="{ 'text-muted': !darkMode }">
+        {{ title }}
+      </span>
+    </div>
+    <div>
+      <p-button *ngIf="!dropdownOptions" [outlined]="true" icon="pi pi-arrow-up-right" [rounded]="true"></p-button>
+
+      @if (dropdownOptions) {
+<!--        <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a City" class="w-full md:w-56" />-->
+        <p-dropdown [options]="dropdownOptions" [(ngModel)]="selectedOption"></p-dropdown>
+      }
+<!--      <p-select [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a City" class="w-full md:w-56" />-->
+<!--      <p-button *ngIf="dropdownOptions" [outlined]="true" icon="pi pi-chevron-down" [label]="selectedOption" [rounded]="true"></p-button>-->
+    </div>
+  </div>
+  <div class="mx-2">
+    @if (data.length <= 1; ) {
+      <div class="d-flex" >
+        <span class="kpi-item-content fw-medium " [style.color]="contentColor">{{ data[0].value }}</span>
+        <span class="mt-2 ms-2">{{ data[0].label }}</span>
+      </div>
+    } @else {
+      <div *ngFor="let item of data" class="d-flex align-items-center mt-2">
+        <span class="kpi-item-content-dot" [ngClass]="item.color"></span>
+        <div class="d-flex ms-3">
+          <span class="fs-4 fw-medium">{{ item.value }}</span>
+          <span class="mt-2 ms-2">{{ item.label }}</span>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
+

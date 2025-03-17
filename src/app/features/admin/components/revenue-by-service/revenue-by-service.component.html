@@ -1,0 +1,26 @@
+<div class="card-custom">
+  <div class="d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+      <i class="fs-5 pi pi-chart-bar "></i>
+      <span class="fw-bold ms-2 ">Chiffre d'affaire de ce mois</span>
+    </div>
+  </div>
+  <div>
+    <apx-chart
+      [series]="revenueStat.series!"
+      [chart]="revenueStat.chart!"
+      [dataLabels]="revenueStat.dataLabels!"
+      [plotOptions]="revenueStat.plotOptions!"
+      [yaxis]="revenueStat.yaxis!"
+      [colors]="revenueStat.colors!"
+      [stroke]="revenueStat.stroke!"
+      [tooltip]="revenueStat.tooltip!"
+      [xaxis]="revenueStat.xaxis!"
+      [labels]="revenueStat.labels!"
+    ></apx-chart>
+  </div>
+  <div class="mt-3">
+    <span>Total: </span>
+    <span class="ms-1 fs-5 fw-bold">MGA 2500,800.02</span>
+  </div>
+</div>

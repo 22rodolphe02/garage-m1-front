@@ -1,0 +1,21 @@
+<div class="card-custom">
+  <div class="d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+      <i class="fs-5 pi pi-chart-bar "></i>
+      <span class="fw-bold ms-2 ">Statistiques des interventions</span>
+    </div>
+  </div>
+  <apx-chart
+    [series]="interventionStat.series!"
+    [chart]="interventionStat.chart!"
+    [dataLabels]="interventionStat.dataLabels!"
+    [plotOptions]="interventionStat.plotOptions!"
+    [yaxis]="interventionStat.yaxis!"
+    [fill]="interventionStat.fill!"
+    [colors]="interventionStat.colors!"
+    [stroke]="interventionStat.stroke!"
+    [tooltip]="interventionStat.tooltip!"
+    [xaxis]="interventionStat.xaxis!"
+    [grid]="interventionStat.grid!"
+  ></apx-chart>
+</div>
