@@ -1,0 +1,14 @@
+.kpi-container {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: stretch;
+
+  g-kpi-card {
+    flex: 1 0 0;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

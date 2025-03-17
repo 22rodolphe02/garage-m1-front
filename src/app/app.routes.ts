@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {adminRoutes} from './features/admin/components/admin.routes';
+import {adminRoutes} from './features/admin/admin.routes';
 
 
 const loadLayoutComponent = () =>

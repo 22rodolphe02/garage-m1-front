@@ -3,7 +3,7 @@ export interface Appointment{
   name: string,
   start: Date,
   end: Date,
-  status: AppointmentStatus
+  status: AppointmentStatus,
 }
 
 export enum AppointmentStatus {
