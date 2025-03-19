@@ -1,0 +1,72 @@
+<div class="d-flex flex-column justify-content-between w-100">
+  <div>
+    <div class="d-flex align-items-center">
+      <div class="circle border">
+        <i class=" pi pi-filter "></i>
+      </div>
+      <div class="d-flex ms-2 flex-column">
+        <span class="fw-medium  ">Filtre</span>
+        <span class="small text-muted">Filtré selon vos critères</span>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <form [formGroup]="formGroup">
+        <div class="filter-group">
+          <div class="filter-title">
+            Option du filtre
+          </div>
+          <div>
+          @for (option of filterOptions; track option.key) {
+            <div class="form-radio d-flex align-items-center filter-item" [class.active]="option === selectedOption" (click)="setSelectedOption(option)">
+              <p-radioButton styleClass="d-flex" [inputId]="option.key" variant="filled" [value]="option" formControlName="option"></p-radioButton>
+              <label class="form-radio-label" [for]="option.key">
+                {{option.name}}
+              </label>
+            </div>
+          }
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">
+            Date d'inscription
+          </div>
+          <div class="">
+            <p-datePicker
+              [readonlyInput]="true" styleClass="d-flex" [iconDisplay]="'input'"
+              [showIcon]="true"  inputStyleClass="" formControlName="inscriptionDate" inputId="templatedisplay">
+              <ng-template #inputicon let-clickCallBack="clickCallBack">
+                <i class="pi pi-calendar-clock" (click)="clickCallBack($event)"></i>
+              </ng-template>
+            </p-datePicker>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">
+            Nombre d'intervention
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <p-floatlabel variant="on" >
+                <p-inputNumber class="col-12" id="min_inter" inputId="integeronly" inputStyleClass="col-2" formControlName="interventionNumberMin" />
+                <label for="min_inter">Min</label>
+              </p-floatlabel>
+            </div>
+            <div class="col-6">
+              <p-floatlabel variant="on">
+                <p-input-number class="col-12" id="max_inter" inputId="integeronly" inputStyleClass="col-2" formControlName="interventionNumberMax" />
+                <label for="max_inter">Max</label>
+              </p-floatlabel>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end mt-4">
+    <p-button label="Appliquer" (onClick)="applyFilter()" [rounded]="true" [outlined]="true"></p-button>
+  </div>
+
+</div>

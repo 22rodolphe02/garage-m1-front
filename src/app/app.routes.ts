@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import {adminRoutes} from './features/admin/admin.routes';
+import {clientRoutes} from './features/client/client.routes';
 
 
 const loadLayoutComponent = () =>
@@ -18,6 +19,10 @@ export const routes: Routes = [
       {
         path: 'admin',
         loadChildren: () => adminRoutes
+      },
+      {
+        path: 'clients',
+        loadChildren: () => clientRoutes
       }
     ]
   }

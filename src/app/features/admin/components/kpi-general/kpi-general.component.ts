@@ -4,7 +4,7 @@ import {KpiCardComponent} from "../../../../shared/components/kpi-card/kpi-card.
 import {Kpi} from '../../../../core/models/kpi.model';
 
 @Component({
-  selector: 'g-stat',
+  selector: 'g-kpi-general',
     imports: [
         Button,
         KpiCardComponent

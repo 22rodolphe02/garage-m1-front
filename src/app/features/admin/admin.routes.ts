@@ -3,6 +3,7 @@ import {AdminDashboardPageComponent} from './pages/admin-dashboard-page/admin-da
 
 export const adminRoutes: Routes = [
   {
-    path: '', component: AdminDashboardPageComponent
+    path: '', loadComponent: () =>
+      import('./pages/admin-dashboard-page/admin-dashboard-page.component').then(c => c.AdminDashboardPageComponent)
   }
 ];
