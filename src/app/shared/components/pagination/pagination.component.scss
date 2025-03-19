@@ -1,0 +1,122 @@
+.custom-pagination{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .page-item{
+    padding: .3rem .7rem;
+    cursor: pointer;
+    border-radius: 8px;
+    //transition: all .2s;
+    margin: 0 .1rem;
+    border: 1px solid transparent;
+    color: #686868;
+
+    &:not(:first-child){
+
+    }
+
+    &:hover, &:focus{
+      color: var(--is-secondary);
+    }
+
+  }
+
+  .active{
+    border-color: var(--is-secondary);
+    color: var(--is-secondary);
+  }
+}
+
+.btn-pagination{
+  padding: .8rem .9rem;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--is-body-bg);
+  color: #616060;
+  //color: var(--is-primary);
+  //border: 1px solid var(--is-primary);
+
+  &:hover, &:focus{
+    background: var(--is-primary);
+    color: white;
+  }
+}
+
+
+.period-container{
+  background: var(--is-body-bg);
+  padding: .2rem .8rem;
+  border-radius: 1.5rem;
+  //border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .period-subcontainer.active{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--g-primary);
+  }
+
+  .period-subcontainer{
+    margin-right: .3rem;
+  }
+
+
+  .period {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    //padding: .3rem .7rem;
+    //border-radius: .5rem;
+    cursor: pointer;
+    transition: all .1s;
+    &:hover{
+      //background: #e8e8e8;
+      background: var(--p-amber-100);
+    }
+
+    &:not(:last-child) {
+      margin-right: .2rem;
+    }
+  }
+
+  .period.active, .period:focus{
+    color: white;
+    background: var(--g-primary);
+  }
+}
+
+.pagination-action{
+  background: var(--g-body-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  //padding: .6rem;
+  //font-size: .9rem;
+  //border: 1px solid var(--is-green-500);
+
+
+  &:hover, &:focus{
+    color: #fff;
+    background: var(--p-yellow-400);
+  }
+
+
+  color: var(is-green-500);
+  //background: var(--is-primary);
+}

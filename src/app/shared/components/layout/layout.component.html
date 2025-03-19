@@ -1,12 +1,12 @@
 <div class="body">
   <div class="sticky-top bg-body px-2 py-3">
-    <g-header></g-header>
+    <g-header [menu]="adminHeaderMenuData"></g-header>
   </div>
-  <div class="p-4">
+  <div class="p-4 " style="padding-bottom: 6.5rem !important;" >
     <router-outlet></router-outlet>
   </div>
 
-  <div class="bg-white sticky-bottom p-2">
+  <div class="bg-white fixed-bottom p-2">
     <g-footer></g-footer>
   </div>
 </div>

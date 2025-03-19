@@ -7,7 +7,6 @@ import {
 @Component({
   selector: 'g-last-interventions',
     imports: [
-        Button,
         InterventionListComponent
     ],
   templateUrl: './last-interventions.component.html',

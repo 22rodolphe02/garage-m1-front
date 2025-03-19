@@ -1,0 +1,52 @@
+<form [formGroup]="fileUploadGroup">
+  <div class="image-upload text-center d-flex flex-column justify-content-center" *ngIf="!file">
+    <div class="">
+      <!--      <div class="fs-4"><i class="pi pi-image"></i></div>-->
+      <div class="fs-4"><i class="pi pi-cloud-upload"></i></div>
+      <div class="">
+        <label class="text-muted " >
+          (fichier .png, .jpg, ... < 5Mo)
+        </label> <br>
+        <span class="text-primary cursor-pointer small">Parcourir les images</span>
+      </div>
+    </div>
+    <span id="upload">
+      <input type="file" placeholder="" (change)="onFileSelected($event)" formControlName="fileName" accept="image/*">
+    </span>
+    <!--    <div class="image-upload-info">-->
+    <!--      <i class="fa-solid fa-circle-exclamation"></i>-->
+    <!--      <small class="ms-1">{{infoMessage}}</small>-->
+    <!--    </div>-->
+  </div>
+  <div id="image-container" class="image-container" *ngIf="file">
+    <div class="cursor-pointer preview-img">
+      <div class="hv-centered">
+        <!--        <img class="show-img img-fluid" [src]="imageSrc">-->
+        <p-image
+          [src]="imageSrc"
+          [imageClass]="'img-fluid'"
+          [imageStyle]="{'max-height': '130px', 'max-width': 'auto'}"
+          alt="Image"
+          [preview]="true" />
+      </div>
+    </div>
+    <div>
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="col-auto mx-3">
+          <span class="image-desc ">
+            <i class="fa-solid fa-check-circle text-success"></i>
+            Principal
+          </span>
+          <!--          <span [ngbTooltip]="'message'" class="cursor-pointer ms-2" placement="top" [tooltipClass]="'tooltip-custom'">-->
+          <!--            <i class="fa-regular fa-question-circle"></i>-->
+          <!--          </span>-->
+        </div>
+        <div class="col-auto text-end mx-3">
+          <span class="delete-image cursor-pointer" (click)="onDeleteFile()">
+            <i class="pi pi-times text-danger"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

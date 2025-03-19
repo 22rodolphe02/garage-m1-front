@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {RouterModule, RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '../header/header.component';
 import {FooterComponent} from '../footer/footer.component';
+import {adminHeaderMenuData} from '../../../core/config/menu.config';
 
 @Component({
   selector: 'app-layout',
@@ -15,4 +16,5 @@ import {FooterComponent} from '../footer/footer.component';
 })
 export class LayoutComponent {
 
+  protected readonly adminHeaderMenuData = adminHeaderMenuData;
 }
