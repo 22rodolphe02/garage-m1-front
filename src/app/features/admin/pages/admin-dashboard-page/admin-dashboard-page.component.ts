@@ -23,7 +23,6 @@ import {
   imports: [
     CommonModule,
     Button,
-    ChartComponent,
     NgApexchartsModule,
     PlanningComponent,
     KpiGeneralComponent,

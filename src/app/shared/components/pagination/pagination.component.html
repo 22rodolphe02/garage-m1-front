@@ -1,0 +1,62 @@
+<!--<div class=" py-1 row " *ngIf="withNo">-->
+
+<!--  <div class="col-auto align-items-center justify-content-center d-flex flex-column">-->
+<!--    <ul class="custom-pagination">-->
+<!--      <li class="page-item" [class.disabled]="pageIndex == 1">-->
+<!--        <button class="page-link" (click)="onChangePage(pageIndex -1)">-->
+<!--          <span>-->
+<!--            <i class="pi pi-chevron-left"></i>-->
+<!--          </span>-->
+<!--        </button>-->
+<!--      </li>-->
+<!--      <ng-container *ngFor="let page of this.pages">-->
+<!--        <li class="page-item" [class.active]="pageIndex == page" (click)="onChangePage(page)">-->
+<!--          <button class="page-link" >{{page}}</button>-->
+<!--        </li>-->
+<!--      </ng-container>-->
+
+<!--      <li class="page-item" [class.disabled]="pageIndex == totalPages" (click)="onChangePage(pageIndex +1)">-->
+<!--        <button class="page-link" >-->
+<!--          <span >-->
+<!--            <i class="pi pi-chevron-right"></i>-->
+<!--          </span>-->
+<!--        </button>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="d-flex align-items-center" *ngIf="withNo">
+  <div class=" me-3 pagination-action " [class.disabled]="pageIndex == 1">
+    <button class="page-link"  (click)="onChangePage(pageIndex -1)">
+      <span class="pi pi-angle-left"></span>
+    </button>
+  </div>
+  <div class="period-container ">
+    <ng-container *ngFor="let page of this.pages">
+      <div class="period-subcontainer" [class.active]="pageIndex == page">
+        <div class="period" [class.active]="pageIndex == page" (click)="onChangePage(page)">
+          <button class="page-link" >{{page}}</button>
+        </div>
+      </div>
+    </ng-container>
+    <!--    <div class="period">Cette semaine</div>-->
+    <!--    <div class="period active">Ce mois</div>-->
+    <!--    <div class="period">Cette année</div>-->
+  </div>
+
+  <div class="pagination-action ms-3" [class.disabled]="pageIndex == totalPages" (click)="onChangePage(pageIndex +1)">
+    <button class="page-link" >
+      <span >
+        <i class="pi pi-angle-right"></i>
+      </span>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="!withNo">
+  <button class="btn btn-pagination">
+    <span>Chargé plus</span>
+    <span class="ms-2 pi pi-angle-double-down"></span>
+  </button>
+</div>

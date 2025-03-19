@@ -43,7 +43,7 @@ export class InterventionListComponent implements OnInit, OnDestroy{
   }
 
   private closObservable(){
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 
 }

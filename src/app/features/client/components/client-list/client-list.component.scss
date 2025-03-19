@@ -1,0 +1,32 @@
+
+.items-group{
+
+  .item-container{
+    margin: .3rem 0;
+  }
+
+  .item{
+    padding: .5rem .5rem;
+    border-bottom: 1px solid #e1e1e1;
+    color: #424141;
+    //border-radius: 0.5rem;
+    //transition: background-color ease-in-out .15s;
+    cursor: pointer;
+
+    &:hover, &:focus, &.active{
+      //color: #fff;
+      color: var(--p-amber-600);
+      border-radius: 0.5rem;
+      border: 1px solid var(--p-amber-400);
+      background: var(--p-amber-50);
+      //background: #b6e3cd;
+
+      .item-info{
+        //color: #05351c;
+      }
+    }
+
+
+
+  }
+}
