@@ -22,8 +22,6 @@ interface EventItem {
   imports: [
     CommonModule,
     Timeline,
-    Card,
-    Button,
     PaginationComponent
   ],
   templateUrl: './intervention-history.component.html',

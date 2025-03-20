@@ -31,7 +31,6 @@ import {CommonModule} from '@angular/common';
     InputGroup,
     InputGroupAddon,
     Dialog,
-    Avatar,
   ],
   templateUrl: './client-list-page.component.html',
   styleUrl: './client-list-page.component.scss'
