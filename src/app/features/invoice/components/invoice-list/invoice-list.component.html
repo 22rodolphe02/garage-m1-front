@@ -1,0 +1,68 @@
+<table class="table table-custom mt-2 ">
+  <thead class=" table-header">
+  <tr>
+    <th>
+      <div class="d-flex align-items-center">
+        <span>Id</span>
+        <div class="d-flex flex-column ms-2">
+          <i class="pi pi-sort-up"></i>
+        </div>
+      </div>
+    </th>
+    <th>
+      <div class="d-flex align-items-center">
+        <span>montant</span>
+        <div class="d-flex flex-column ms-2">
+          <i class="pi pi-sort-up"></i>
+        </div>
+      </div>
+    </th>
+    <th>
+      <div class="d-flex align-items-center">
+        <span>Date</span>
+        <div class="d-flex flex-column ms-2">
+          <i class="pi pi-sort-up"></i>
+        </div>
+      </div>
+    </th>
+
+    <th>
+      <div class="d-flex align-items-center">
+        <span>status</span>
+        <div class="d-flex flex-column ms-2">
+          <i class="pi pi-sort-up"></i>
+        </div>
+      </div>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (invoice of numbers; track invoice) {
+      <tr>
+        <td>
+          <a [routerLink]="'/'" class="link">
+            INV-002
+          </a>
+        </td>
+        <td>
+          <span class="fw-bold text-muted">{{billing | currency }}</span>
+        </td>
+        <td>
+          <div class="d-flex flex-column">
+<!--            <a [routerLink]="'/'" class="link">Citroen C4</a>-->
+            <span class="text-muted">{{dateTest | date:'longDate'}}</span>
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="badge-success d-flex align-items-center">
+              <i class="pi pi-circle-on" style="font-size: .5rem" ></i>
+              <span class="ms-2">payé</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+

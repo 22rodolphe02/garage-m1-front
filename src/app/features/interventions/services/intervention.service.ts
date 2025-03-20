@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import {CrudService} from '../../../core/services/crud.service';
 import {Intervention} from '../models/intervention.model';
-import {environment} from '../../../../environments/environment';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {ResourceService} from '../../../core/services/resource.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InterventionService {
+export class InterventionService extends ResourceService<Intervention>{
 
-  private apiUrl: string = `${environment.apiUrl}/interventions`
-
-  constructor(private crudService: CrudService<Intervention>, private http: HttpClient) { }
+  constructor(http: HttpClient) {
+    super(http); // 🔹 Passer 'clients' en argument ici
+    this.setApiUrl("interventions")
+  }
 
 
   public getInterventions(filters: { [key: string]: string }, sort: string, pagination: { page: number, limit: number }): Observable<Intervention[]>{
@@ -44,7 +44,7 @@ export class InterventionService {
     params = params.set('page', pagination.page.toString()).set('limit', pagination.limit.toString());
 
     // return this.http.get<Intervention[]>(preparedUrl, { params });
-    return this.crudService.getAll(preparedUrl, params)
+    return this.getAll(params)
 
 
   }

@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {InputText} from 'primeng/inputtext';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FloatLabel} from 'primeng/floatlabel';
 import {DatePicker} from 'primeng/datepicker';
@@ -10,7 +9,6 @@ import {InputNumber} from 'primeng/inputnumber';
 @Component({
   selector: 'g-client-filter',
   imports: [
-    InputText,
     ReactiveFormsModule,
     FormsModule,
     FloatLabel,

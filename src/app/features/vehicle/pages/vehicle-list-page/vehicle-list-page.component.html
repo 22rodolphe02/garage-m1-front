@@ -27,15 +27,12 @@
             <input pInputText id="on_label" placeholder="Recherche..."  />
           </p-inputgroup>
         </div>
-<!--        <div class="col-auto">-->
-<!--          <p-button icon="pi pi-sliders-h" severity="secondary" [text]="true" [rounded]="true"></p-button>-->
-<!--        </div>-->
       </div>
     </div>
   </div>
 
   <div class="my-3 d-flex flex-column justify-content-between align-items-end">
-    <g-vehicle-list></g-vehicle-list>
+    <g-vehicle-list [data]="data$ | async"></g-vehicle-list>
     <div class="mt-4">
       <g-pagination [totalItems]="40"></g-pagination>
     </div>
