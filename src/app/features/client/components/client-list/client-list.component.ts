@@ -1,10 +1,11 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {CurrencyPipe} from '@angular/common';
+import {Client} from '../../models/client.model';
+import {Observable} from 'rxjs';
+import {ClientService} from '../../services/client.service';
 
 @Component({
   selector: 'g-client-list',
   imports: [
-    CurrencyPipe
   ],
   templateUrl: './client-list.component.html',
   styleUrl: './client-list.component.scss'
@@ -14,7 +15,13 @@ export class ClientListComponent {
 
   @Output() rowId: EventEmitter<number> = new EventEmitter()
 
+  clients$!: Observable<Client[]>
+
   onClick(number: number) {
     this.rowId.emit(number);
+  }
+
+  constructor(private clientService: ClientService) {
+
   }
 }

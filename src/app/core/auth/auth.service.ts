@@ -22,7 +22,8 @@ export class AuthService {
       id: 1,
       email: 'sc@gmail.com',
       username: 'test',
-      token: 'sfknfngejt.314fsfvgf'
+      token: 'sfknfngejt.314fsfvgf',
+      registrationDate: new Date()
     }
 
     this.currentUserSubject.next(user); // Mettre à jour l'utilisateur courant

@@ -10,6 +10,9 @@ const InterventionHistory = () =>
   import('../interventions/pages/intervention-history/intervention-history.component').then(m => m.InterventionHistoryComponent);
 
 
+const InvoiceListComponent = () =>
+  import('../invoice/pages/invoice-list-page/invoice-list-page.component').then(m => m.InvoiceListPageComponent);
+
 export const clientRoutes: Routes = [
   {
     path: '', loadComponent: () =>
@@ -29,6 +32,10 @@ export const clientRoutes: Routes = [
           {
             path: 'interventions-history',
             loadComponent: InterventionHistory
+          },
+          {
+            path: 'invoices',
+            loadComponent: InvoiceListComponent
           },
           {
             path: '',
