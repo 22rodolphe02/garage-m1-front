@@ -22,33 +22,29 @@
     </div>
   </div>
 
-  <div class="d-flex">
-    <div class="col-12">
-      <p-timeline [value]="events" >
-        <ng-template #opposite let-event>
-          <small class="text-surface-500 dark:text-surface-400">{{ event.date }}</small>
-        </ng-template>
+  <div class="d-flex justify-content-center">
+    <div class="col-9">
+      <p-timeline [value]="events" class="w-100">
+<!--        <ng-template #opposite let-event>-->
+<!--          <small class="text-surface-500 dark:text-surface-400">{{ event.date }}</small>-->
+<!--        </ng-template>-->
         <ng-template #content let-event >
-          <div class="card-custom">
-            <div class="d-flex justify-content-between mb-2">
+          <div class="pt-2">
+            <small class="text-surface-500 dark:text-surface-400">{{ event.date }}</small>
+            <div class="card-custom">
+              <div class="d-flex justify-content-between mb-2">
+                <div>
+                  <span class="fs-6 fw-semibold">{{event.title}}</span>
+                </div>
+                <div class="badge-{{event.type}} small">
+                  <span class="fw-semibold">{{event.status}}</span>
+                </div>
+              </div>
               <div>
-                <span class="fs-6 fw-semibold">{{event.title}}</span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur
               </div>
-              <div class="badge-{{event.type}} small">
-                <span class="fw-semibold">{{event.status}}</span>
-              </div>
-            </div>
-            <div>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur
             </div>
           </div>
-          <!--        <p-card [header]="event.status" [subheader]="event.date" >-->
-          <!--          <img *ngIf="event.image" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image" [alt]="event.name" width="200" class="shadow" />-->
-          <!--          <p>-->
-          <!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate-->
-          <!--            neque quas!-->
-          <!--          </p>-->
-          <!--        </p-card>-->
         </ng-template>
       </p-timeline>
     </div>

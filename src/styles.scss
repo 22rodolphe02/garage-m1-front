@@ -37,6 +37,11 @@ html, body{
   align-items: center;
 }
 
+.circle-xl{
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
 .text-primary{
   color: var(--g-primary) !important;
 }
@@ -194,9 +199,40 @@ a{
   cursor: pointer !important;
 }
 
-.p-timeline-event-content{
-  margin-top: .8rem;
+.card-primary{
+  background: var(--p-blue-50);
+  //color: var(--p-blue-500);
+  border-color: var(--p-blue-500);
 }
+
+.card-secondary{
+  //color: var(--p-zinc-500);
+  background: var(--p-zinc-50);
+  border-color: var(--p-zinc-50);
+}
+
+.card-success{
+  //color: var(--p-green-500);
+  border-color: var(--p-green-500);
+  background: var(--p-green-50);
+}
+
+.card-warning{
+  //color: var(--p-amber-500);
+  border-color: var(--p-amber-500);
+  background: var(--p-amber-50);
+}
+
+.card-danger{
+  //color: #D6545E;
+  background: #ffe8ea;
+  border-color: #D6545E;
+}
+
+
+//.p-timeline-event-content{
+//  margin-top: .8rem;
+//}
 
 
 

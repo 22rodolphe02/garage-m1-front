@@ -1,7 +1,7 @@
-.badge-warning{
-  background: var(--p-amber-50);
-  color: var(--p-amber-500);
-}
+//.badge-warning{
+//  background: var(--p-amber-50);
+//  color: var(--p-amber-500);
+//}
 
 .circle{
   width: 2.2rem;
@@ -11,6 +11,19 @@
 
 
 ::ng-deep .fc {
+
+  //.fc .fc-timegrid-col.fc-day-today {
+  //  background-color: var(--fc-today-bg-color);
+  //}
+
+  .fc-day fc-timegrid-col{
+    border: 0 !important;
+  }
+
+  .fc-timegrid-col.fc-day-today {
+    background-color: transparent !important;
+  }
+
   .fc-daygrid-day.fc-day-today {
     background: transparent;
     .fc-daygrid-day-top {
@@ -32,7 +45,7 @@
   }
 
   .fc-event {
-    padding: .3rem;
+    padding: .2rem;
     background: #fff;
     border-radius: .5rem;
     border: 1px solid var(--p-amber-600);
@@ -63,24 +76,35 @@
     border: 0;
   }
 
-  *> table {
-    border-collapse: separate;
-    border-spacing: 2px;
-    table-layout: auto;
-
-    th, tr:last-child > td:last-child{
-      border: 0 !important;
-    }
-
-    tbody tr td {
-      padding: .2rem;
-      border-radius: .5rem;
-      background: #fff;
-    }
-  }
+  //*> table {
+  //  border-collapse: separate;
+  //  border-spacing: 2px;
+  //  table-layout: auto;
+  //
+  //  th, tr:last-child > td:last-child{
+  //    border: 0 !important;
+  //  }
+  //
+  //  tbody tr td {
+  //    padding: .2rem;
+  //    border-radius: .5rem;
+  //    background: #fff;
+  //  }
+  //}
 
   th {
     font-weight: normal;
+  }
+
+  .fc-button-primary{
+    background: var(--g-primary);
+    border: var(--g-primary);
+    border-radius: 1.2rem ;
+
+    &:not(:disabled):hover, &:not(:disabled):active, &:not(:disabled):focus-visible, &:not(:disabled):focus{
+      background: var(--p-amber-600);
+      box-shadow: none !important;
+    }
   }
 
   .fc-prev-button,
@@ -143,14 +167,19 @@
 
   }
 
+
+
   .fc-button-primary:focus {
     box-shadow: none;
   }
 
   .fc-toolbar-chunk > div {
     display: flex;
+    align-items: center;
 
     .fc-toolbar-title {
+      font-weight: 500;
+      font-size: 1.3rem;
       margin-right: 1rem;
     }
   }

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
 import {Client} from '../../models/client.model';
 import {Observable} from 'rxjs';
 import {ClientService} from '../../services/client.service';
@@ -10,7 +10,7 @@ import {ClientService} from '../../services/client.service';
   templateUrl: './client-list.component.html',
   styleUrl: './client-list.component.scss'
 })
-export class ClientListComponent {
+export class ClientListComponent implements OnDestroy{
   currencyCode: string = 'MGA '
 
   @Output() rowId: EventEmitter<number> = new EventEmitter()
@@ -24,4 +24,10 @@ export class ClientListComponent {
   constructor(private clientService: ClientService) {
 
   }
+
+  ngOnDestroy(): void {
+
+  }
+
+
 }
