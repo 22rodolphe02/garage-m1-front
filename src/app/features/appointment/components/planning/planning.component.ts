@@ -1,30 +1,46 @@
-import {Component, Input, ViewChild} from '@angular/core';
+import {Component, Input, OnDestroy, ViewChild} from '@angular/core';
 import {DatePipe, LowerCasePipe} from "@angular/common";
 import {FullCalendarComponent, FullCalendarModule} from "@fullcalendar/angular";
 import {CalendarOptions} from '@fullcalendar/core';
 import {planningConfig} from '../../../../core/config/planning.config';
 import {Planning} from '../../models/planning.model';
 import {AppointmentStatus} from '../../models/appointment.model';
+import {AppointmentDetailsComponent} from '../appointment-details/appointment-details.component';
+import {DialogService, DynamicDialogModule, DynamicDialogRef} from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'g-planning',
   imports: [
     DatePipe,
     FullCalendarModule,
-    LowerCasePipe
+    LowerCasePipe,
+    DynamicDialogModule
   ],
+  providers: [DialogService],
   templateUrl: './planning.component.html',
   styleUrl: './planning.component.scss'
 })
-export class PlanningComponent {
+export class PlanningComponent implements OnDestroy{
   calendarOptions !: CalendarOptions
   @ViewChild('calendar') calendarComponent!: FullCalendarComponent;
 
   @Input({alias: 'plannings', required: false}) plannings: Planning[] = []
 
-  constructor() {
+  ref: DynamicDialogRef | undefined;
+
+  constructor(private dialogService: DialogService) {
     // this.initCalendarOptions();
     this.initPlannings();
+  }
+
+  show() {
+    this.ref = this.dialogService.open(AppointmentDetailsComponent, {
+      closable: true,
+      width: '25%',
+      closeOnEscape: true,
+      contentStyle: { 'max-height': '500px', overflow: 'auto' },
+      header: 'Detail',
+    });
   }
 
 
@@ -61,8 +77,9 @@ export class PlanningComponent {
   }
 
   handleEventClick(arg: any) {
-    console.log(arg.event.extendedProps)
-    alert('Event clicked: ' + arg.event.title);
+    this.show()
+    // console.log(arg.event.extendedProps)
+    // alert('Event clicked: ' + arg.event.title);
   }
 
   fakePlannings(){
@@ -71,24 +88,24 @@ export class PlanningComponent {
         id: 1,
         name: 'Michel Sebastien',
         status: AppointmentStatus.CANCELLED,
-        start: new Date('2025-03-12 08:30:00'),
-        end: new Date('2025-03-12 10:00:00'),
+        start: new Date('2025-03-18 08:30:00'),
+        end: new Date('2025-03-18 10:00:00'),
         statusClass: 'danger'
       },
       {
         id: 1,
         name: 'Michel Sebastien',
         status: AppointmentStatus.CONFIRMED,
-        start: new Date('2025-03-14 08:30:00'),
-        end: new Date('2025-03-14 12:00:00'),
+        start: new Date('2025-03-20 08:30:00'),
+        end: new Date('2025-03-20 12:00:00'),
         statusClass: 'success'
       },
       {
         id: 1,
         name: 'Michel Sebastien',
         status: AppointmentStatus.PENDING,
-        start: new Date('2025-03-14 15:30:00'),
-        end: new Date('2025-03-14 18:00:00'),
+        start: new Date('2025-03-21 15:30:00'),
+        end: new Date('2025-03-21 18:00:00'),
         statusClass: 'warning'
       }
     ]
@@ -104,7 +121,7 @@ export class PlanningComponent {
         title: planning.name, // Nom de la personne
         start: planning.start.toISOString(), // Conversion en format ISO
         end: planning.end.toISOString(),
-        allDay: true,
+        allDay: false,
         classNames: [`event-${planning.statusClass}`], // Ajoute une classe CSS pour le style
         extendedProps: {
           content: {
@@ -112,6 +129,12 @@ export class PlanningComponent {
           }
         }
       }))
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.ref) {
+      this.ref.close();
     }
   }
 }

@@ -5,29 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="447f1bdd-253f-40ae-951d-1e129499bc36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/vehicle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/models/resource.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/features/invoice/models/invoice.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/features/vehicle/models/vehicle.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/appointment/planning.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/invoice/invoice.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/models/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/crud.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/crud.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/appointment/components/planning/planning.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/appointment/components/planning/planning.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/appointment/components/planning/planning.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/appointment/components/planning/planning.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/appointment/components/planning/planning.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/appointment/components/planning/planning.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/appointment/models/appointment.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/appointment/models/appointment.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/appointment/models/planning.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/appointment/models/planning.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/client/client.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/client.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/client/components/client-filter/client-filter.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/components/client-filter/client-filter.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/client/components/client-list/client-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/components/client-list/client-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/client/models/client.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/models/client.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/client/pages/client-details-page/client-details-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/pages/client-details-page/client-details-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/client/pages/client-details-page/client-details-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/pages/client-details-page/client-details-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/client/pages/client-list-page/client-list-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/client/pages/client-list-page/client-list-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/interventions/pages/intervention-history/intervention-history.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/interventions/pages/intervention-history/intervention-history.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/interventions/pages/intervention-history/intervention-history.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/interventions/pages/intervention-history/intervention-history.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/interventions/services/intervention.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/interventions/services/intervention.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/vehicle/components/vehicle-list/vehicle-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/vehicle/components/vehicle-list/vehicle-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/vehicle/components/vehicle-list/vehicle-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/vehicle/components/vehicle-list/vehicle-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/vehicle/pages/vehicle-list-page/vehicle-list-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/vehicle/pages/vehicle-list-page/vehicle-list-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/vehicle/pages/vehicle-list-page/vehicle-list-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/vehicle/pages/vehicle-list-page/vehicle-list-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/interventions/pages/intervention-history/intervention-history.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/interventions/pages/intervention-history/intervention-history.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +55,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/client-details&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/appointment&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/data/M1/Rojo/exam/garage-m1-front/public/img&quot;,
@@ -164,6 +154,7 @@
       <workItem from="1742366891027" duration="16190000" />
       <workItem from="1742409821452" duration="536000" />
       <workItem from="1742451697881" duration="1701000" />
+      <workItem from="1742460390583" duration="11180000" />
     </task>
     <servers />
   </component>
