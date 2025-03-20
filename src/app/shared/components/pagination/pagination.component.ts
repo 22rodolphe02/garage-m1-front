@@ -33,19 +33,23 @@ export class PaginationComponent implements OnInit{
   setPages(){
 
     if (this.totalPages <= 6) {
-      this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1)
-    }else {
-      let start = this.pageIndex - 3;
-      let end = this.pageIndex + 3;
-      if (start < 1) {
+      this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
+    } else {
+
+      console.log(this.totalPages)
+
+      let start = Math.max(1, this.pageIndex - 2);
+      let end = Math.min(this.totalPages, this.pageIndex + 2);
+
+      if (this.pageIndex <= 3) {
         start = 1;
-        end = 6;
-      }
-      if (end > this.totalPages) {
+        end = 5;
+      } else if (this.pageIndex >= this.totalPages - 2) {
+        start = this.totalPages - 4;
         end = this.totalPages;
-        start = this.totalPages - 5;
       }
-      this.pages = Array.from(Array(end - start + 1).keys()).map(i => i + start);
+
+      this.pages = Array.from({length: end - start + 1}, (_, i) => start + i);
     }
   }
 
