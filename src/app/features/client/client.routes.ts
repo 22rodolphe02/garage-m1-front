@@ -1,4 +1,5 @@
 import {Routes} from '@angular/router';
+import {invoiceRoutes} from '../invoice/invoice.routes';
 
 const ClientDetailComponent = () =>
   import('./pages/client-details-page/client-details-page.component').then(m => m.ClientDetailsPageComponent);
@@ -9,9 +10,6 @@ const VehicleListComponent = () =>
 const InterventionHistory = () =>
   import('../interventions/pages/intervention-history/intervention-history.component').then(m => m.InterventionHistoryComponent);
 
-
-const InvoiceListComponent = () =>
-  import('../invoice/pages/invoice-list-page/invoice-list-page.component').then(m => m.InvoiceListPageComponent);
 
 export const clientRoutes: Routes = [
   {
@@ -35,7 +33,7 @@ export const clientRoutes: Routes = [
           },
           {
             path: 'invoices',
-            loadComponent: InvoiceListComponent
+            children: invoiceRoutes
           },
           {
             path: '',
