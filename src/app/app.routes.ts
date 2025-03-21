@@ -3,6 +3,7 @@ import {adminRoutes} from './features/admin/admin.routes';
 import {clientRoutes} from './features/client/client.routes';
 import {planningRoutes} from './features/appointment/planning.routes';
 import {serviceRoutes} from './features/service/service.routes';
+import {mechanicRoutes} from './features/mechanic/mechanic.routes';
 
 
 const loadLayoutComponent = () =>
@@ -33,6 +34,10 @@ export const routes: Routes = [
       {
         path: 'services',
         loadChildren: () => serviceRoutes
+      },
+      {
+        path: 'mechanics',
+        loadChildren: () => mechanicRoutes
       },
     ]
   }
