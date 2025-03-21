@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="447f1bdd-253f-40ae-951d-1e129499bc36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/features/mechanic/mechanic.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/features/mechanic/models/mechanic.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/appointment/components/appointment-list/appointment-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/appointment/components/appointment-list/appointment-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/service/components/service-list/service-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/service/components/service-list/service-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/features/service/pages/service-list-page/service-list-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/service/pages/service-list-page/service-list-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/service/pages/service-list-page/service-list-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/service/pages/service-list-page/service-list-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +47,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/service-creation&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/mechanic-list&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/data/M1/Rojo/exam/garage-m1-front/public/img&quot;,
@@ -150,6 +148,8 @@
       <workItem from="1742451697881" duration="1701000" />
       <workItem from="1742460390583" duration="11180000" />
       <workItem from="1742499270388" duration="604000" />
+      <workItem from="1742536952439" duration="4031000" />
+      <workItem from="1742565444581" duration="441000" />
     </task>
     <servers />
   </component>
